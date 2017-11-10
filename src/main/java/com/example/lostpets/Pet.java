@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.*;
 
-enum Status {LOST, FOUND}
 
 @Entity
 public class Pet {
@@ -47,7 +46,7 @@ public class Pet {
     @Digits(integer=10, fraction=0)
     private String phone;
 
-    private  Status currentStatus;
+    private  String currentStatus;
 
     public long getId() {
         return id;
@@ -61,11 +60,11 @@ public class Pet {
         return name;
     }
 
-    public Status getCurrentStatus() {
+    public String getCurrentStatus() {
         return currentStatus;
     }
 
-    public void setCurrentStatus(Status currentStatus) {
+    public void setCurrentStatus(String currentStatus) {
         this.currentStatus = currentStatus;
     }
 

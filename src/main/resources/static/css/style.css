@@ -76,3 +76,11 @@
 .tspan{
     color: darkblue;
 }
+
+.table_h3{
+    font-size: large;
+    font-style: italic;
+    color: darkblue;
+    text-align: center;
+    margin-bottom: 10px;
+}

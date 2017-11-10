@@ -31,11 +31,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li ><a href="/home">Home</a></li>
+                <li><a href="/home">Home</a></li>
                 <li><a href="/add">Add</a></li>
-                <li ><a href="/">Show All</a></li>
-                <li ><a href="/modify">Modify</a></li>
-                <li ><a href="/delete">Delete</a></li>
+                <li><a href="/">Show All</a></li>
+                <li><a href="/modify">Modify</a></li>
+                <li><a href="/delete">Delete</a></li>
                 <li class="active"><a href="/search">Search<span class="sr-only">(current)</span></a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -45,12 +45,27 @@
 
 <div class="container">
 
+    <form action="#" th:action="@{/searchlist}" method="post" class="form_bg">
 
-    <form action="#" th:action="@{/searchlist}"  method="post" class="form_bg">
-        <h2>Enter the name to serach for: </h2>
+        <div class="row inputst">
+            <label class="col-md-3 labelst">Field :</label>
+            <div class="form-group col-md-6">
+                <select class="form-control" id="sel1" name="searchfield">
+                    <option th:value="name">Name</option>
+                    <option th:value="age">Age</option>
+                    <option th:value="type">Type</option>
+                    <option th:value="breed">Breed</option>
+                    <option th:value="color">Color</option>
+                    <option th:value="features">Features</option>
+                    <option th:value="phone">Phone</option>
+                    <option th:value="currentStatus">Status</option>
+                </select>
+            </div>
+            <span class="col-md-3"></span>
+        </div>
         <div class="inputst">
             <label class="col-md-3 labelst"> Search <span class="glyphicon glyphicon-search"></span>:</label>
-            <input type="text" name="searchStr" class="col-md-6"  placeholder="Enter search string"/>
+            <input type="text" name="searchStr" class="col-md-6" placeholder="Enter search string"/>
             <span class="col-md-3"></span><br/>
         </div>
         <br/>

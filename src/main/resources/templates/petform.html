@@ -32,7 +32,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li ><a href="/home">Home</a></li>
-                <li class="active"><a href="/add">Add<span class="sr-only">(current)</span></a></li>
+                <li ><a href="/add">Add</a></li>
                 <li ><a href="/">Show All</a></li>
                 <li ><a href="/modify">Modify</a></li>
                 <li ><a href="/delete">Delete</a></li>
@@ -93,8 +93,8 @@
             <label class="col-md-3 labelst">Current Status :</label>
             <div class="form-group col-md-6">
                 <select class="form-control" id="sel1" th:field="*{currentStatus}">
-                    <option th:value="LOST">Lost</option>
-                    <option th:value="FOUND">Found</option>
+                    <option th:value="lost">Lost</option>
+                    <option th:value="found">Found</option>
                 </select>
             </div>
             <span class="col-md-3"></span>
